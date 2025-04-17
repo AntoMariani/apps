@@ -1,0 +1,13 @@
+# Ignorar archivos pesados
+*.mp4
+*.wav
+
+# Pero mantener las carpetas
+!*/.gitkeep
+
+# Archivos compilados por PyInstaller
+/dist/
+/build/
+*.spec
+*.pkg
+*.exe

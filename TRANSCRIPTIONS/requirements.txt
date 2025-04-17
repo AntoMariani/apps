@@ -1,0 +1,8 @@
+whisper
+gdown
+yt-dlp
+python-slugify
+pyperclip
+ffmpeg-python
+openai
+pyaudio
