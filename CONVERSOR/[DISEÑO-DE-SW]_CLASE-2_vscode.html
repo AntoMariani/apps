@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+    @page {
+        margin: 1cm;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #1e1e1e;
+        margin: 1cm;
+    }
+    p { margin-bottom: 1em; }
+    ul, ol { margin: 1em 0 1em 2em; }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1.2em 0;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        text-align: left;
+    }
+    blockquote {
+        border-left: 4px solid #ccc;
+        margin: 1em 0;
+        padding-left: 1em;
+        color: #555;
+        font-style: italic;
+    }
+    hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 2em 0;
+    }
+    code, pre {
+        font-family: Consolas, 'Courier New', monospace;
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 4px;
+    }
+    pre code {
+        display: block;
+        padding: 12px;
+        overflow-x: auto;
+    }
+</style>
+</head>
+<body>
+<h1 style="color:#1e1e1e;font-size:24px;border-bottom:2px solid #ccc;padding-bottom:0.2em;margin-top:1.5em;margin-bottom:0.5em;font-weight:bold;">Resumen Detallado de Clases de Diseño de Interfaz, Experiencia de Usuario (UX) y UML</h1>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">1. Introducción General</h2>
+<p>Durante las primeras clases se introdujeron los conceptos fundamentales sobre diseño de interfaz, experiencia de usuario y UML, que servirán de base para el desarrollo de ejercicios prácticos y del trabajo práctico grupal. El enfoque inicial estuvo centrado en:
+- <strong>Diseño de interfaces de usuario.</strong>
+- <strong>User Experience (UX).</strong>
+- <strong>Lenguaje de modelado unificado (UML).</strong>
+- <strong>Uso de herramientas como StarUML.</strong></p>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">2. Diseño de Interfaz (según Pressman)</h2>
+<p>Basado principalmente en el libro de <strong>Roger Pressman</strong>, el diseño de interfaces constituye el vínculo entre el sistema y el ser humano. Tiene como objetivo facilitar la comunicación y la interacción, sentando las bases del prototipo de la solución.</p>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Principales ideas abordadas:</h3>
+<ul>
+<li>La interfaz debe posibilitar la comunicación eficiente entre usuario y sistema.</li>
+<li>Permite identificar y dar forma a los requerimientos mediante interacción iterativa.</li>
+<li>Ayuda a obtener información clara del usuario final.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Reglas Doradas del Diseño (Pressman):</h3>
+<ol>
+<li><strong>Ceder el control al usuario:</strong> El usuario debe poder realizar acciones libremente, corregir errores, retroceder, y navegar sin restricciones.</li>
+<li><strong>Reducir la carga de memoria del usuario:</strong> Evitar que el usuario tenga que recordar pasos o estructuras para realizar tareas; la interfaz debe guiar.</li>
+<li><strong>Ser consistente:</strong> Uniformidad visual y funcional en botones, colores, estructuras y formas de navegación.</li>
+</ol>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Principios clásicos adicionales:</h3>
+<ul>
+<li>Visibilidad de las acciones disponibles.</li>
+<li>Prevención de errores.</li>
+<li>Facilidad de aprendizaje.</li>
+<li>Flexibilidad y eficiencia.</li>
+<li>Uso de metáforas visuales conocidas.</li>
+<li>Seguimiento del estado de acciones.</li>
+<li>Simplicidad visual y comunicacional.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Referencias adicionales:</h3>
+<ul>
+<li><strong>Ley de Fitts:</strong> fórmula matemática que permite medir la facilidad de interacción del usuario con elementos de la interfaz (por ejemplo, tamaño y distancia de botones).</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Pregunta típica de examen:</h3>
+<ul>
+<li><em>"Nombrar y explicar tres principios fundamentales del diseño de interfaz de usuario".</em></li>
+</ul>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">3. Experiencia de Usuario (UX)</h2>
+<p>El diseño centrado en el usuario implica colocar al usuario en el centro del desarrollo. UX abarca desde la investigación inicial hasta el prototipado y validación.</p>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Etapas del proceso de UX:</h3>
+<ol>
+<li><p><strong>Investigación del usuario:</strong></p>
+<ul>
+<li>Entrevistas y observación del usuario final.</li>
+<li>Comprensión del perfil: edad, ocupación, nivel educativo y tecnológico.</li>
+<li>Identificación de necesidades, frustraciones y dolencias ("pains").</li>
+</ul></li>
+<li><p><strong>Prototipado de soluciones:</strong></p>
+<ul>
+<li>Desarrollo de versiones preliminares de la interfaz basadas en la información relevada.</li>
+</ul></li>
+<li><p><strong>Evaluación y pruebas de usabilidad:</strong></p>
+<ul>
+<li>Pruebas controladas con usuarios reales.</li>
+<li>Recolección de feedback.</li>
+<li>Iteración y mejora del diseño.</li>
+</ul></li>
+</ol>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Modelo Conceptual CUE (Conceptual User Experience Model):</h3>
+<ul>
+<li><strong>Capacidades:</strong> Qué puede hacer el usuario dentro del sistema.</li>
+<li><strong>Usabilidad:</strong> Nivel de facilidad, intuición y eficiencia en el uso.</li>
+<li><strong>Identidad emocional:</strong> Qué tan identificado se siente el usuario.</li>
+<li><strong>Interacción:</strong> Cómo navega y utiliza el sistema.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Aclaraciones del docente:</h3>
+<ul>
+<li>Importante diferenciar entre el usuario <strong>pagador</strong> (cliente) y el <strong>usuario final</strong> (quien realmente usará la herramienta).</li>
+<li>Incluir variables emocionales en el análisis (ej. frustración de vendedores, herramientas incómodas).</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Ejemplo mencionado:</h3>
+<ul>
+<li>Vendedores de una farmacéutica usando un celular BlackBerry con teclas pequeñas. No era funcional por la ergonomía del usuario.</li>
+</ul>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">4. Trabajo Práctico: User Persona + Prototipos</h2>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">User Persona:</h3>
+<p>Representación semi-ficticia del usuario promedio del sistema.</p>
+<p><strong>Debe incluir:</strong>
+- Nombre.
+- Edad y ocupación.
+- Nivel de manejo tecnológico.
+- Objetivos laborales.
+- Frustraciones y necesidades reales.</p>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Herramientas sugeridas para prototipado:</h3>
+<ul>
+<li><strong>Lucidchart:</strong> Colaborativa, también permite diagramas UML.</li>
+<li><strong>Draftium:</strong> Rápida y sencilla.</li>
+<li><strong>Figma:</strong> Avanzada, profesional, colaborativa.</li>
+<li><strong>Balsamiq:</strong> Baja fidelidad, exporta imágenes.</li>
+<li><strong>Excel:</strong> Alternativa simple para representar flujo de pantallas.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Notas importantes:</h3>
+<ul>
+<li>El diseño es iterativo. No se espera que la primera versión sea definitiva.</li>
+<li>No se evalúa la estética, sino la funcionalidad y coherencia con el caso de uso.</li>
+<li><strong>La primera entrega es el 19 de abril.</strong> No se admite postergación.</li>
+</ul>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">5. Fundamentos del Buen Diseño de Software</h2>
+<p>El diseño es parte esencial del desarrollo y debe pensarse desde el inicio. Se hace hincapié en que es <strong>iterativo</strong> e <strong>incremental</strong>.</p>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Características de un buen diseño:</h3>
+<ul>
+<li>Cumple con los requerimientos funcionales.</li>
+<li>Es modular (dividido en componentes independientes).</li>
+<li>Legible, comprensible y mantenible.</li>
+<li>Preparado para cambios futuros.</li>
+<li>Representado con un lenguaje común: <strong>UML</strong>.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Conceptos clave:</h3>
+<ul>
+<li><strong>Separación de incumbencias:</strong> Dividir grandes problemas en tareas más simples.</li>
+<li><strong>Ocultamiento de información:</strong> Cada componente debe esconder sus detalles internos.</li>
+<li><strong>Agilidad al cambio:</strong> El diseño debe permitir incorporar nuevas funcionalidades con el menor impacto posible.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Importancia del mantenimiento:</h3>
+<ul>
+<li>Aunque el desarrollo inicial dura meses, el mantenimiento puede durar años.</li>
+<li>Si el diseño es pobre, los cambios serán costosos y complejos.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Discusión con el profesor:</h3>
+<ul>
+<li>Se defendió el uso de "include" incluso si en el momento no se reutiliza, para pensar en extensibilidad futura.</li>
+</ul>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">6. UML (Lenguaje de Modelado Unificado)</h2>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Características principales:</h3>
+<ul>
+<li>Es un lenguaje estándar, utilizado globalmente.</li>
+<li>Facilita la comunicación en proyectos.</li>
+<li>Permite visualizar el sistema desde diferentes "vistas".</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Comparación:</h3>
+<ul>
+<li>Como en arquitectura: una misma casa tiene planos estructurales, eléctricos, etc.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Diagramas importantes:</h3>
+<ul>
+<li><strong>Casos de uso:</strong>
+<ul>
+<li>Relaciona actores con funcionalidades.</li>
+<li>Da una visión completa de lo que el sistema debe hacer.</li>
+</ul></li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Relaciones entre casos de uso:</h3>
+<ul>
+<li><strong>Include:</strong> La funcionalidad se reutiliza en múltiples casos.</li>
+<li><strong>Extend:</strong> La funcionalidad ocurre bajo una condición especial.</li>
+<li><strong>Generalización:</strong> Un actor o caso de uso hereda características de otro.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Herramienta utilizada:</h3>
+<ul>
+<li><strong>StarUML:</strong> Se recomendó una versión antigua y estable para evitar licencias.</li>
+</ul>
+<h3 style="color:#1e1e1e;font-size:17px;margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Ejercicio práctico:</h3>
+<ul>
+<li>Crear un diagrama de casos de uso con:
+<ul>
+<li>Flujo principal (ej. "Procesar venta").</li>
+<li>Flujos alternativos (ej. "Pago con crédito", "Pago con débito").</li>
+<li>Uso de relaciones como include y extend.</li>
+</ul></li>
+</ul>
+<hr/>
+<h2 style="color:#1e1e1e;font-size:20px;border-bottom:1px solid #ccc;padding-bottom:0.2em;margin-top:1.2em;margin-bottom:0.5em;font-weight:bold;">Recomendaciones Finales del Curso</h2>
+<ul>
+<li>No perder tiempo en la estética inicial de la interfaz.</li>
+<li>Priorizar la coherencia funcional.</li>
+<li>Trabajar activamente en grupo: el trabajo práctico es colaborativo.</li>
+<li>Estudiar los principios de diseño, UX y modelado UML.</li>
+<li>Ser conscientes de que el diseño es evolutivo: se mejora constantemente con el feedback del usuario.</li>
+</ul>
+<blockquote>
+<p><strong>Recordatorio clave:</strong>
+  - El proceso de diseño es iterativo.
+  - El primer entregable vence el <strong>19 de abril</strong>.
+  - La funcionalidad es más importante que la apariencia.
+  - Pensar el sistema con enfoque modular y extensible desde el inicio.</p>
+</blockquote>
+
+</body>
+</html>
